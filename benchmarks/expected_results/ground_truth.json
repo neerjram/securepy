@@ -1,0 +1,122 @@
+{
+  "benchmarks/vulnerable/cmd_direct.py": {
+    "is_vulnerable": true,
+    "expected_cwe": "CWE-78",
+    "category": "Command Injection",
+    "description": "Direct OS command injection"
+  },
+  "benchmarks/vulnerable/cmd_concat.py": {
+    "is_vulnerable": true,
+    "expected_cwe": "CWE-78",
+    "category": "Command Injection",
+    "description": "Concatenated command string injection"
+  },
+  "benchmarks/vulnerable/cmd_alias.py": {
+    "is_vulnerable": true,
+    "expected_cwe": "CWE-78",
+    "category": "Command Injection",
+    "description": "Multi-hop alias command injection"
+  },
+  "benchmarks/vulnerable/cmd_subprocess_shell.py": {
+    "is_vulnerable": true,
+    "expected_cwe": "CWE-78",
+    "category": "Command Injection",
+    "description": "Subprocess with shell=True"
+  },
+  "benchmarks/vulnerable/sql_concat.py": {
+    "is_vulnerable": true,
+    "expected_cwe": "CWE-89",
+    "category": "SQL Injection",
+    "description": "SQL injection via concatenation"
+  },
+  "benchmarks/vulnerable/sql_fstring.py": {
+    "is_vulnerable": true,
+    "expected_cwe": "CWE-89",
+    "category": "SQL Injection",
+    "description": "SQL injection via f-string"
+  },
+  "benchmarks/vulnerable/creds_api_key.py": {
+    "is_vulnerable": true,
+    "expected_cwe": "CWE-798",
+    "category": "Hardcoded Credentials",
+    "description": "Hardcoded API secret key"
+  },
+  "benchmarks/vulnerable/creds_password.py": {
+    "is_vulnerable": true,
+    "expected_cwe": "CWE-798",
+    "category": "Hardcoded Credentials",
+    "description": "Hardcoded database password"
+  },
+  "benchmarks/vulnerable/eval_dynamic.py": {
+    "is_vulnerable": true,
+    "expected_cwe": "CWE-95",
+    "category": "Code Execution",
+    "description": "Dynamic eval execution"
+  },
+  "benchmarks/vulnerable/exec_dynamic.py": {
+    "is_vulnerable": true,
+    "expected_cwe": "CWE-95",
+    "category": "Code Execution",
+    "description": "Dynamic exec execution"
+  },
+  "benchmarks/vulnerable/pickle_untrusted.py": {
+    "is_vulnerable": true,
+    "expected_cwe": "CWE-502",
+    "category": "Insecure Deserialization",
+    "description": "Insecure pickle.loads"
+  },
+  "benchmarks/vulnerable/yaml_unsafe.py": {
+    "is_vulnerable": true,
+    "expected_cwe": "CWE-502",
+    "category": "Insecure Deserialization",
+    "description": "Insecure yaml.load"
+  },
+  "benchmarks/secure/cmd_safe_subprocess.py": {
+    "is_vulnerable": false,
+    "expected_cwe": null,
+    "category": null,
+    "description": "Safe subprocess list argument handling"
+  },
+  "benchmarks/secure/cmd_safe_shlex.py": {
+    "is_vulnerable": false,
+    "expected_cwe": null,
+    "category": null,
+    "description": "Safe shlex.quote shell sanitization"
+  },
+  "benchmarks/secure/sql_safe_parameterized.py": {
+    "is_vulnerable": false,
+    "expected_cwe": null,
+    "category": null,
+    "description": "Safe parameterized SQL query"
+  },
+  "benchmarks/secure/creds_safe_getenv.py": {
+    "is_vulnerable": false,
+    "expected_cwe": null,
+    "category": null,
+    "description": "Safe credential lookup via os.getenv"
+  },
+  "benchmarks/secure/creds_safe_placeholder.py": {
+    "is_vulnerable": false,
+    "expected_cwe": null,
+    "category": null,
+    "description": "Safe placeholder string"
+  },
+  "benchmarks/secure/eval_safe_literal.py": {
+    "is_vulnerable": false,
+    "expected_cwe": null,
+    "category": null,
+    "description": "Safe ast.literal_eval parsing"
+  },
+  "benchmarks/secure/pickle_safe_json.py": {
+    "is_vulnerable": false,
+    "expected_cwe": null,
+    "category": null,
+    "description": "Safe JSON deserialization"
+  },
+  "benchmarks/secure/yaml_safe_load.py": {
+    "is_vulnerable": false,
+    "expected_cwe": null,
+    "category": null,
+    "description": "Safe YAML safe_load"
+  }
+}
